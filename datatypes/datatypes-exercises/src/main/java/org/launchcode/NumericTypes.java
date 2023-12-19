@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 // part B Numeric Types
 
-public class ExerciseOne {
+public class NumericTypes {
     public static void main(String[] args) {
         Scanner inputLength = new Scanner(System.in);
         System.out.println("What is the length of your rectangle.");
