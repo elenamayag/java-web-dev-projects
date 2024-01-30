@@ -1,2 +1,26 @@
-package questions;public class Checkbox {
+package questions;
+
+public class Checkbox extends Question {
+    public Checkbox(String question, Choice[] choiceArray) {
+        super(question, choiceArray);
+        setMaxResponses();
+    }
+
+    @Override
+    public String toString() {
+        String newline = System.lineSeparator();
+        return newline + "CHOOSE ONE OR MORE:" + newline +
+                getQuestion() + newline +
+                getFormatChoices();
+    }
+
+    public int getNumCorrect() {
+        int numCorrect = 0;
+        for (Choice choice : getChoiceMap().values()) {
+            if (choice.isCorrect()) {
+                numCorrect++;
+            }
+        }
+        return numCorrect;
+    }
 }
